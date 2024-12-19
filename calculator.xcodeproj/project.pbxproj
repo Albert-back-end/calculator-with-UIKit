@@ -20,8 +20,8 @@
 		00824FB198769F502AEAED7C /* Pods_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE504F0ADFC847A7DC4E2EF /* Pods-calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-calculator.debug.xcconfig"; path = "Target Support Files/Pods-calculator/Pods-calculator.debug.xcconfig"; sourceTree = "<group>"; };
 		509576C42D1406A6002C4C3E /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		509576C72D1406A6002C4C3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		509576C92D1406A6002C4C3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		509576C72D1406A6002C4C3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = calculator/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		509576C92D1406A6002C4C3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
 		509576CB2D1406A6002C4C3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		509576CE2D1406A6002C4C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		509576D02D1406A9002C4C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,7 +56,6 @@
 				3AE504F0ADFC847A7DC4E2EF /* Pods-calculator.debug.xcconfig */,
 				EA70B140140A7BB5F60C463E /* Pods-calculator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +80,63 @@
 		509576C62D1406A6002C4C3E /* calculator */ = {
 			isa = PBXGroup;
 			children = (
-				509576C72D1406A6002C4C3E /* AppDelegate.swift */,
-				509576C92D1406A6002C4C3E /* SceneDelegate.swift */,
-				509576CB2D1406A6002C4C3E /* ViewController.swift */,
-				509576CD2D1406A6002C4C3E /* Main.storyboard */,
-				509576D02D1406A9002C4C3E /* Assets.xcassets */,
-				509576D22D1406A9002C4C3E /* LaunchScreen.storyboard */,
-				509576D52D1406A9002C4C3E /* Info.plist */,
+				50CFED7E2D14328A00675E34 /* App */,
+				50CFED822D14337100675E34 /* Models */,
+				50CFED832D14338A00675E34 /* ViewModels */,
+				50CFED842D1433A500675E34 /* Views */,
+				50CFED812D1432DC00675E34 /* Resources */,
+				50CFED802D1432C700675E34 /* Storyboards */,
 			);
 			path = calculator;
+			sourceTree = "<group>";
+		};
+		50CFED7E2D14328A00675E34 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				509576C92D1406A6002C4C3E /* SceneDelegate.swift */,
+				509576C72D1406A6002C4C3E /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		50CFED802D1432C700675E34 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				509576CD2D1406A6002C4C3E /* Main.storyboard */,
+				509576D22D1406A9002C4C3E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		50CFED812D1432DC00675E34 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				509576D52D1406A9002C4C3E /* Info.plist */,
+				509576D02D1406A9002C4C3E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		50CFED822D14337100675E34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		50CFED832D14338A00675E34 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				509576CB2D1406A6002C4C3E /* ViewController.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		50CFED842D1433A500675E34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +319,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -335,7 +382,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -364,7 +411,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N9VU636ZTX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = calculator/Info.plist;
+				INFOPLIST_FILE = calculator/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -393,7 +440,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N9VU636ZTX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = calculator/Info.plist;
+				INFOPLIST_FILE = calculator/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
